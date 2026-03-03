@@ -1,14 +1,15 @@
+import { MyTitleBar } from './Index';
+
 @Entry
 @Component
 struct second {
   @State message: string = 'Second page';
 
+
   build(){
     Row(){
       Column() {
-        Text(this.message)
-          .fontSize(20)
-          .fontWeight(FontWeight.Bold)
+        MyTitleBar()
         Button() {
           Text('Back')
             .fontSize(10)

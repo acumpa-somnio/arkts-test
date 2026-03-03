@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\a_cum\\.ohos\\config\\default_WearableTest_6jhZLKtzjeqNnCLG6ZA8FNUcqeKs6P9xWvhnPJWAvhI=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B306E47965E7626643ADD79F95E0C1B95B7AB47BC551CAA3AF22B8DF3568177525A203A8D8156EE",
+          "profile": "C:\\Users\\a_cum\\.ohos\\config\\default_WearableTest_6jhZLKtzjeqNnCLG6ZA8FNUcqeKs6P9xWvhnPJWAvhI=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\a_cum\\.ohos\\config\\default_WearableTest_6jhZLKtzjeqNnCLG6ZA8FNUcqeKs6P9xWvhnPJWAvhI=.p12",
+          "storePassword": "0000001B4D73882CB131C77A30F843B143A0CEAB7A7AD9DDB8C2FB8A459281C7F4295285188EFDEF3B0807"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
