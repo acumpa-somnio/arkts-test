@@ -15,6 +15,18 @@
     {
       "name": "title_label",
       "value": "This Title from Resource"
+    },
+    {
+      "name": "server_address",
+      "value": "https://wizard-world-api.herokuapp.com/Spells"
+    },
+    {
+      "name": "http_response_error",
+      "value": "Request error, please check if there is a network."
+    },
+    {
+      "name": "reason",
+      "value": "Allow applications to access web API using the Internet network."
     }
   ]
 }

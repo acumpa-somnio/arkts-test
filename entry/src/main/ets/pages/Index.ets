@@ -2,7 +2,6 @@ import { preferences } from '@kit.ArkData';
 import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { window } from '@kit.ArkUI';
-
 export { MyTitleBar } from '../components/MyTitleBar';
 
 @Entry
@@ -31,15 +30,7 @@ struct Index {
         .width('40%')
         .height('5%')
         .onClick(()=>{
-          console.info(`Succeeded in clicking the 'Next' button.`);
-          let uiContext: UIContext = this.getUIContext()
-          let router  = uiContext.getRouter()
-
-          router.pushUrl({url: 'pages/second', params:'1'}).then(()=>{
-            console.info(`Succeeded in jumping to the second page.`)
-          }).catch((err: BusinessError)=>{
-            console.error(`Failed to jump to the second page. Code is ${err.code}, message is ${err.message}`)
-          })
+          this.navigateTo("pages/second")
         })
         Text(`${this.count}`)
         Button(){
@@ -53,19 +44,35 @@ struct Index {
         .backgroundColor('#ff466746')
         .height(20)
         .width(20)
+
+        Button(){
+          Text('Spells')
+        }
+        .type(ButtonType.ROUNDED_RECTANGLE)
+        .onClick(()=>{
+          //let isGskvSupported = preferences.isStorageTypeSupported(preferences.StorageType.GSKV);
+          //console.info("Is gskv supported on this platform: " + isGskvSupported);
+          this.navigateTo("pages/spells")
+        })
       }
-      Button(){
-        Text('Save')
-      }
-      .type(ButtonType.ROUNDED_RECTANGLE)
-      .onClick(()=>{
-        let isGskvSupported = preferences.isStorageTypeSupported(preferences.StorageType.GSKV);
-        console.info("Is gskv supported on this platform: " + isGskvSupported);
-      })
+
       .width('100%')
     }
     .height('100%')
   }
+
+  navigateTo(route: string){
+    console.info(`Succeeded in clicking the 'Next' button.`);
+    let uiContext: UIContext = this.getUIContext()
+    let router  = uiContext.getRouter()
+
+    router.pushUrl({url: route, params:'1'}).then(()=>{
+      console.info(`Succeeded in jumping to the second page.`)
+    }).catch((err: BusinessError)=>{
+      console.error(`Failed to jump to the second page. Code is ${err.code}, message is ${err.message}`)
+    })
+  }
+
 }
 
 

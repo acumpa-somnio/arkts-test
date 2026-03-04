@@ -1,6 +1,8 @@
 {
   "src": [
     "pages/Index",
-    "pages/second"
+    "pages/second",
+    "pages/spells",
+    "pages/spellDetail"
   ]
 }
