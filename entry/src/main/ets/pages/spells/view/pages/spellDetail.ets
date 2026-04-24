@@ -1,7 +1,7 @@
-import httpGet from '../common/utils/HttpUtil';
-import CommonConstant from '../common/constant/CommonConstants';
+import httpGet from '../../../../common/utils/HttpUtil';
+import CommonConstant from '../../../../common/constant/CommonConstants';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { Spell } from '../models/spell';
+import { Spell } from '../../../../models/spell';
 import { HashMap, JSON } from '@kit.ArkTS';
 
 const webSrc: ResourceStr = CommonConstant.SERVER;

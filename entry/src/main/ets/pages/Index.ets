@@ -1,15 +1,26 @@
 import { preferences } from '@kit.ArkData';
 import { UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { window } from '@kit.ArkUI';
+import { notificationManager } from '@kit.NotificationKit';
+import { SECOND_PAGE_ROUTE, SPELLS_PAGE_ROUTE } from '../utils/Routes';
+import { SpellsViewModel } from './spells/viewmodel/SpellsViewModel';
+
 export { MyTitleBar } from '../components/MyTitleBar';
 
 @Entry
 @Component
 struct Index {
+
   @State message: string = 'Hello World';
   @State toggle: boolean = false;
   @State count: number = 0;
+
+  aboutToAppear(): void {
+    SpellsViewModel.triggerSimpleNotification();
+    SpellsViewModel.setPushToken();
+  }
 
   build() {
     Row() {
@@ -30,7 +41,7 @@ struct Index {
         .width('40%')
         .height('5%')
         .onClick(()=>{
-          this.navigateTo("pages/second")
+          this.navigateTo(SECOND_PAGE_ROUTE)
         })
         Text(`${this.count}`)
         Button(){
@@ -52,7 +63,7 @@ struct Index {
         .onClick(()=>{
           //let isGskvSupported = preferences.isStorageTypeSupported(preferences.StorageType.GSKV);
           //console.info("Is gskv supported on this platform: " + isGskvSupported);
-          this.navigateTo("pages/spells")
+          this.navigateTo(SPELLS_PAGE_ROUTE)
         })
       }
 
@@ -72,7 +83,8 @@ struct Index {
       console.error(`Failed to jump to the second page. Code is ${err.code}, message is ${err.message}`)
     })
   }
-
 }
+
+
 
 

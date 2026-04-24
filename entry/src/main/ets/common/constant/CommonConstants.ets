@@ -1,3 +1,7 @@
+
+export const APP_PREFERENCES_NAME = "MyPreferences";
+export const DOMAIN_NUMBER: number = 0xFF00;
+
 export default class CommonConstant {
   static readonly SERVER: Resource = $r('app.string.server_address');
 

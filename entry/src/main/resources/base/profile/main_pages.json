@@ -2,7 +2,7 @@
   "src": [
     "pages/Index",
     "pages/second",
-    "pages/spells",
-    "pages/spellDetail"
+    "pages/spells/view/pages/spells",
+    "pages/spells/view/pages/spellDetail"
   ]
 }

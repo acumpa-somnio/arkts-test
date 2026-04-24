@@ -10,7 +10,7 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "Huawei World Cup"
     },
     {
       "name": "title_label",
@@ -25,8 +25,20 @@
       "value": "Request error, please check if there is a network."
     },
     {
-      "name": "reason",
+      "name": "permission_description_internet",
       "value": "Allow applications to access web API using the Internet network."
+    },
+    {
+      "name": "permission_description_vibration",
+      "value": "This permission allows your app to make the device vibrate"
+    },
+    {
+      "name": "permission_description_notification",
+      "value": "This permission allows your app to display notifications"
+    },
+    {
+      "name": "permission_description_background_running",
+      "value": "This permission allows your app to receive data while in background"
     }
   ]
 }
